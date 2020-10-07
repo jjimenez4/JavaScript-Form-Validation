@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Jennifer Jimenez
+	Project 4
+	ISM 4300 -->
+
+<head>
+	<title>Project 4</title>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+<!-- Form is being validated, the code is checking if the inputs are blank and if they are they will come back as false forcing the user to input data -->
+	<script>
+	function validateForm() 
+	{
+	  var x = document.forms["myForm"]["fname","lname","email"].value;
+	  if (x == "") 
+	  {
+	    alert("All fields must be filled out");
+	    return false;
+	  }
+	}
+	</script>
+</head>
+
+<!-- Heading information -->
+<body>
+	<h1>Jennifer Jimenez & Co.</h1>
+	<h2>Customer Information</h2>
+	<h3>
+<!-- Form created that is being validated with JavaScript, there are 3 text boxes that need to be filled to click submit -->
+<form name="myForm" onsubmit="return validateForm()" method="post">
+  Name: 
+  <input type="text" name="fname">
+<p>
+  Last Name: 
+  <input type="text" name="lname">
+</p>
+<p>
+  Email: 
+  <input type="text" name="email">
+</p>
+
+<input type="submit" value="Submit">
+
+</form>
+
+</h3>
+</body>
+</html>
